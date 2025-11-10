@@ -1,165 +1,87 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TypeMaster for Windows (Offline)</title>
-    <meta
-      name="description"
-      content="TypeMaster — the clean, minimal typing app that helps you find your flow. Practice typing with classic stories — now 100% offline and free."
-    />
- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-      // Simple Dark Mode Toggle
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
-  </head>
+<!doctype html>
+<html>
 
-  <body
-    class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans selection:bg-indigo-500/30"
-  >
-    <header
-      class="border-b border-gray-200 dark:border-gray-800 py-6 px-6 flex justify-between items-center max-w-4xl mx-auto"
-    >
-      <h1 class="text-2xl font-semibold tracking-tight">
-        TypeMaster <span class="text-indigo-500">for Windows</span>
-      </h1>
-      <button
-        id="theme-toggle"
-        class="p-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-      >
-        🌓
-      </button>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #7ed957;
+      --color-dark: #1a1a1a;
+      --color-light-gray: #f5f5f5;
+      --color-medium-gray: #e5e5e5;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+  </style>
+</head>
 
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-12">
-      <!-- Hero Section -->
-      <section class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">
-          The clean, minimal typing app that helps you find your flow.
-        </h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Practice your typing skills with classic stories — not just random
-          words — now 100% offline.
-        </p>
-      </section>
+<body class="bg-white">
+  <!-- Hero Section -->
+  <section class="w-full min-h-screen flex items-center px-4 py-8 md:py-12 lg:py-20">
+    <div class="max-w-7xl mx-auto w-full">
+      <!-- Grid Layout: Responsive stacking -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-      <hr class="border-gray-300/30 dark:border-gray-700/40" />
+        <!-- LEFT SIDE: Content -->
+        <div class="flex flex-col justify-center space-y-6 md:space-y-8">
+          <!-- Heading -->
+          <div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-dark">
+              Master Your <span class="italic">Typing</span>
+            </h1>
+          </div>
 
-      <!-- Download Section -->
-      <section class="text-center space-y-6">
-        <h3 class="text-2xl font-semibold">🚀 Download Now</h3>
-        <p class="text-gray-600 dark:text-gray-400">
-          Get the latest version of TypeMaster for Windows. After installation —
-          No internet required.
-        </p>
-        <a
-          href="./TypeMaster_0.1.0_x64_en-US.msi"
-          class="inline-block mt-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-xl transition"
-          >⬇️ Download TypeMaster v0.1.0 for Windows (x64)</a
-        >
-        <p class="text-sm text-gray-500 mt-2">
-          File Size: ~4.7MB • Installer Type: .msi
-        </p>
-      </section>
+          <!-- Description -->
+          <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-lg">
+            Get the latest version of TypeMaster for Windows. After installation — No internet required.
+          </p>
 
-      <hr class="border-gray-300/30 dark:border-gray-700/40" />
+          <!-- Download Button & Info -->
+          <div class="space-y-4 pt-2">
+            <a href="./TypeMaster_0.1.0_x64_en-US.msi" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-primary text-dark font-semibold rounded-lg hover:bg-green-400 transition-all duration-200 transform hover:scale-105 w-full sm:w-auto justify-center sm:justify-start">
+              <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span>Download TypeMaster v0.1.0</span>
+            </a>
 
-      <!-- About Section -->
-      <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">👋 What is this?</h3>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          TypeMaster was originally built as a web app because I wanted a more
-          enjoyable way to practice typing — something beyond the usual “quick
-          brown fox” or random word generators.
-        </p>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          That led to <strong>Story Mode</strong> — where you get to type out
-          real classic literature. It helps build rhythm, flow, and confidence.
-        </p>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          A lot of users requested an offline version, so here it is:
-        </p>
+            <div class="text-sm text-gray-600 space-y-1">
+              <div>📦 File Size: ~4.7MB</div>
+              <div>💾 Installer Type: .msi • Windows (x64)</div>
+            </div>
+          </div>
 
-        <ul
-          class="list-none text-gray-600 dark:text-gray-400 grid sm:grid-cols-2 gap-2 mt-3"
-        >
-          <li>✅ 100% Free</li>
-          <li>✅ 100% Offline</li>
-          <li>✅ Works great without the noise of a browser</li>
-        </ul>
-      </section>
+          <!-- Stats Section -->
+          <div class="grid grid-cols-2 gap-6 md:gap-8 pt-4 md:pt-8">
+            <div class="space-y-2">
+              <div class="text-3xl md:text-4xl font-bold text-dark">Offline</div>
+              <p class="text-sm text-gray-600">Works without internet</p>
+            </div>
+            <div class="space-y-2">
+              <div class="text-3xl md:text-4xl font-bold text-dark">Fast</div>
+              <p class="text-sm text-gray-600">Lightweight installer</p>
+            </div>
+          </div>
+        </div>
 
-      <hr class="border-gray-300/30 dark:border-gray-700/40" />
+        <!-- RIGHT SIDE: Product Showcase -->
+        <div class="flex items-center justify-center lg:justify-end w-full">
+          <div class="relative w-full space-y-4">
+            <!-- First Image Container -->
+            <div class="w-full aspect-video lg:aspect-auto lg:h-[400px]">
+              <img src="https://typemaster.ntxm.org/images/HomePage.png" alt="TypeMaster Screenshot" class="w-full h-full object-cover rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300" />
+            </div>
+          </div>
+        </div>
 
-      <!-- Features Section -->
-      <section class="space-y-5">
-        <h3 class="text-2xl font-semibold">✨ Key Features</h3>
-        <ul
-          class="space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed list-disc list-inside"
-        >
-          <li><strong>💻 Fully Offline</strong> — Practice anywhere, anytime.</li>
-          <li><strong>🧘 Zen-like Experience</strong> — No ads, no distractions.</li>
-          <li>
-            <strong>📚 Story Mode</strong> — Type entire chapters from real
-            books to build flow.
-          </li>
-          <li>
-            <strong>⏱️ Classic Test Mode</strong> — Track WPM and accuracy.
-          </li>
-          <li>
-            <strong>🕊️ Lightweight & Free</strong> — Small file, fast install,
-            totally free.
-          </li>
-        </ul>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <hr class="border-gray-300/30 dark:border-gray-700/40" />
+</body>
 
-      <!-- Installation Section -->
-      <section class="space-y-4">
-        <h3 class="text-2xl font-semibold">💾 Installation</h3>
-        <ol
-          class="list-decimal list-inside text-gray-600 dark:text-gray-400 space-y-2"
-        >
-          <li>Download the <code>.msi</code> file using the link above.</li>
-          <li>Double-click to start setup.</li>
-          <li>
-            If Windows SmartScreen pops up, click
-            <strong>More info → Run anyway</strong>.
-          </li>
-          <li>After installation, launch TypeMaster from the Start Menu.</li>
-        </ol>
-      </section>
-
-      <hr class="border-gray-300/30 dark:border-gray-700/40" />
-
-      <!-- Footer -->
-      <footer class="text-center py-8 text-gray-500 dark:text-gray-400">
-        Made with ❤️ by <span class="font-semibold text-indigo-400">NTXM</span>
-      </footer>
-    </main>
-
-    <script>
-      // Toggle theme
-      document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.documentElement;
-        if (html.classList.contains("dark")) {
-          html.classList.remove("dark");
-          localStorage.theme = "light";
-        } else {
-          html.classList.add("dark");
-          localStorage.theme = "dark";
-        }
-      });
-    </script>
-  </body>
 </html>
